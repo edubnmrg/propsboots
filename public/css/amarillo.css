@@ -1,5 +1,5 @@
 .navbar-default {
-  background-color: #0000f1;
+  background-color: #1b79bb;
   border-color: #000000;
 }
 .navbar-default .navbar-brand {
@@ -7,7 +7,7 @@
 }
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
-  color: ##cae5ee;
+  color: #f7eb85;
 }
 .navbar-default .navbar-text {
   color: #ffffff;
