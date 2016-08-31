@@ -18,6 +18,7 @@ var connection = mysql.createConnection({
 
 app.use(cookieParser());
 app.use(express.static('./imagenes'));
+app.use('/public',express.static('public'));
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
 
@@ -66,6 +67,13 @@ app.get(`/`,auth,function(req,res){
   })
 
 });
+app.get(`/acerca`,function(req,res){
+    res.render('acerca');
+  });
+
+app.get(`/contacto`,function(req,res){
+    res.render('contacto');
+  });
 
   app.get(`/props`,function(req,res){
     if(req.query.query_url){

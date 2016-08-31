@@ -1,24 +1,40 @@
 
 
-<div class='marco50'>
+<!-- <div class='marco50'> -->
   <div >
-    <table>
-      <tr>
-        <td>
+
           <h1>Pegar url: </h1>
-        </td>
-        <td>
+
           <form method=GET action='/props'>
           <input class='prop-input' type='text' name='query_url'>
           </form>
+
+  </div>
+<br>
+  <div class="container ">
+  <table class="table table-bordered table-striped table-hover">
+    <thead style="background-color:#0000f1;color:#ffffff">
+        <th>Propiedad</th>
+        <th>Visitas</th>
+
+    </thead>
+    <tbody>
+      {{#each visitas}}
+      <tr>
+        <td class="col-md-12">
+          <a href=/props?query_url={{this.texto}}>{{this.texto}}</a>
+        </td>
+        <td class="col-sm-1">
+          {{this.numero}}
         </td>
       </tr>
-    </table>
+      {{/each}}
+    </tbody>
+
+  </table>
   </div>
 
-
-
-  <div class='datagrid_blue'>
+  <!-- <div class='datagrid_blue'>
     <table >
       <thead>
         <tr>
@@ -41,7 +57,7 @@
       </tbody>
     </table>
   </div>
-</div>
+</div> -->
 
 <style>
   .prop-input {
